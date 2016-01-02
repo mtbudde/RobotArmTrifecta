@@ -104,7 +104,7 @@ void loop()
   
   //Claw
   clawState = digitalRead( clawPedal );
-  if( clawState == 0 ) {
+  if( clawState == 1 ) {
     FourPin.moveSpeed( 5, 50, 1023 );
   } else {
     FourPin.moveSpeed( 5, 1023, 1023 );
