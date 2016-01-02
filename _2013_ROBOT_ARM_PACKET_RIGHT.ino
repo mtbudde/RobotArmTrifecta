@@ -87,14 +87,12 @@ void loop()
   if( effectorVerticalVal > 50 ) {
     if( verticalStateUp != HIGH ) {
       FourPin.turn( 2, LEFT, effectorVerticalVal );
-      verticalStateUp = digitalRead( verticalLimitUp );
     } else {
       FourPin.turn( 2, LEFT, 50 );
     }
   } else if( effectorVerticalVal < -50 ) {
     if( verticalStateDown != LOW ) {
       FourPin.turn( 2, RIGTH, -effectorVerticalVal );
-      verticalStateDown = digitalRead( verticalLimitDown );
     } else {
       FourPin.turn( 2, RIGTH, 0 );
     }
